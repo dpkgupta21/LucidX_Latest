@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InboxVC">
+            <connections>
+                <outlet property="IBCancelBtn" destination="2x0-e0-QyB" id="AV2-zc-y1g"/>
+                <outlet property="IBCancelWidth" destination="QOP-iq-gIh" id="YKO-az-Oab"/>
+                <outlet property="IBContntTbl" destination="mTI-yZ-4jy" id="WLh-BX-NmK"/>
+                <outlet property="IBSearchBar" destination="daT-o8-JOc" id="Djj-5b-BaX"/>
+                <outlet property="view" destination="VGC-lI-NGN" id="IRv-eX-GxU"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="VGC-lI-NGN">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mTI-yZ-4jy">
+                    <rect key="frame" x="0.0" y="56" width="375" height="611"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="hs5-rv-RXa"/>
+                        <outlet property="delegate" destination="-1" id="HmX-hc-aWA"/>
+                    </connections>
+                </tableView>
+                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="daT-o8-JOc">
+                    <rect key="frame" x="0.0" y="0.0" width="315" height="56"/>
+                    <color key="barTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="4VC-Du-7lO"/>
+                    </connections>
+                </searchBar>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2x0-e0-QyB">
+                    <rect key="frame" x="315" y="0.0" width="60" height="56"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="QOP-iq-gIh"/>
+                    </constraints>
+                    <state key="normal" title="Cancel">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="IBCancelClicked:" destination="-1" eventType="touchUpInside" id="8tO-5A-uRt"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="daT-o8-JOc" firstAttribute="top" secondItem="VGC-lI-NGN" secondAttribute="top" id="3lP-1M-qas"/>
+                <constraint firstAttribute="trailing" secondItem="mTI-yZ-4jy" secondAttribute="trailing" id="API-Re-QWs"/>
+                <constraint firstItem="mTI-yZ-4jy" firstAttribute="top" secondItem="daT-o8-JOc" secondAttribute="bottom" id="OKv-XF-Okg"/>
+                <constraint firstItem="mTI-yZ-4jy" firstAttribute="top" secondItem="2x0-e0-QyB" secondAttribute="bottom" id="Tjq-Cg-nav"/>
+                <constraint firstItem="mTI-yZ-4jy" firstAttribute="leading" secondItem="VGC-lI-NGN" secondAttribute="leading" id="XJD-tp-qQK"/>
+                <constraint firstAttribute="trailing" secondItem="2x0-e0-QyB" secondAttribute="trailing" id="adS-zQ-4Op"/>
+                <constraint firstItem="2x0-e0-QyB" firstAttribute="leading" secondItem="daT-o8-JOc" secondAttribute="trailing" id="g5Y-z8-74n"/>
+                <constraint firstItem="daT-o8-JOc" firstAttribute="leading" secondItem="VGC-lI-NGN" secondAttribute="leading" id="pQF-c5-w9A"/>
+                <constraint firstItem="2x0-e0-QyB" firstAttribute="top" secondItem="VGC-lI-NGN" secondAttribute="top" id="rSW-B0-avL"/>
+                <constraint firstAttribute="bottom" secondItem="mTI-yZ-4jy" secondAttribute="bottom" id="t5L-KM-YUf"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

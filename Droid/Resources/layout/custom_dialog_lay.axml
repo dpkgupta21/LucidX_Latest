@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialog_rounded"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/common_dialog_parent_container_padd">
+
+  <LucidX.Droid.Source.CustomViews.CustomTextView
+      android:id="@+id/titleTV"
+      style="@style/tv_style"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentTop="true"
+      android:gravity="center_vertical"
+      android:text="Title"
+      android:textColor="@color/black" />
+
+  <View
+      android:id="@+id/horizontal_line"
+      android:layout_width="match_parent"
+      android:layout_height=".5dp"
+      android:layout_below="@id/titleTV"
+      android:background="@android:color/darker_gray" />
+
+  <LucidX.Droid.Source.CustomViews.CustomTextView
+      android:id="@+id/messageTV"
+      style="@style/tv_style"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/horizontal_line"
+      android:layout_marginTop="@dimen/common_dialog_items_mar"
+      android:gravity="center_vertical"
+      android:maxLines="3"
+      android:text="Message" />
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/messageTV"
+      android:layout_marginTop="@dimen/common_dialog_items_mar"
+      android:gravity="center_horizontal"
+      android:orientation="horizontal"
+      android:weightSum="1">
+
+    <LucidX.Droid.Source.CustomViews.CustomButton
+        android:id="@+id/submitBtn"
+        style="@style/btn_rounded_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/common_dialog_items_mar"
+        android:layout_weight=".50"
+        android:text="Retour"
+        android:visibility="visible" />
+
+    <LucidX.Droid.Source.CustomViews.CustomButton
+        android:id="@+id/cancelBtn"
+        style="@style/btn_rounded_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/submitBtn"
+        android:layout_weight=".50"
+        android:text="Okay" />
+  </LinearLayout>
+</LinearLayout>

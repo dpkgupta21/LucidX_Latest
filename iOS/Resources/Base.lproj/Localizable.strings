@@ -1,0 +1,84 @@
+/* Common Strings */
+"LSContinue"="Continue";
+"LSSave"="Save";
+"LSSuccessTitle"="myHERO";
+"LSErrorTitle"="Error";
+"LSDone"="Done";
+"LSNext"="Next";
+"LSOkKey"="OK";
+"LSCancelKey"="Cancel";
+"LSYesKey"="YES";
+"LSNoKey"="NO";
+"LSMessageKey"="Message";
+"LSBlankKey" = "Please enter ";
+"LSBlankSelectKey" = "Please select ";
+"LSSubmitBtnTitle" = "Submit";
+"LSDeleteKey" = "Delete";
+"LSEditKey" = "Edit";
+"LSAddKey" = "Add";
+"LSValidMinMaxLengthMsg" = "{0} should contain minimum {1} and maximum {2} characters";
+"LSSeetings"="Settings";
+"LSBackgroundAppRefreshDenied" = "The app doesn't work without the Background App Refresh enabled. To turn it on, go to Settings > General > Background App Refresh";
+"LSBackgroundAppRefreshRestricted" = "The functions of this app are limited because the Background App Refresh is disable.";
+"LSToTitle"="To";
+"LSCloseKey" = "Close";
+
+/* ErrorMessagess */
+"LSNoInternet" = "No internet connection available, please check your internet connection.";
+"LSNORecordsKey" = "No Record Found";
+"LSInvalidCredentialError" = "Invalid credentials";
+"LSConnectionTitle" = "Connection Error";
+"LSGPSError" = "GPS is not enabled. Do you want to go to settings menu?";
+"LSUnknownError" = "An Error Occured please try again later";
+"LSLocationNotFound" = "Enable to get your location";
+"LSSessionExpired" = "Your Session has Expired. Please login again";
+"LSCmapignHeroDone" = "Participation for this activity has been completed";
+"LSNoRecord" = "No More {0} to display";
+"LSCodeMatchErr" = "Code is not valid.";
+"LSBlankUsername" = "Please enter Username";
+"LSBlankPassword" = "Please enter Password";
+"LSBlankDataBase" = "Please select a DataBase";
+"LSReloadMsg"="Please reload page to get data";
+"LSBlankMsg" = "Please enter all details.";
+
+/* common strings */
+"LSCopyRightTxt"="Copyright © 2017-18 Elucidate softwares";
+"LSCompanyTitle"="Login Elucidate5";
+"LSVersionInfo"="v2018.1.1008";
+
+
+/* LoginVC screen strings */
+"LSUsername"="Username";
+"LSPassword"="Password";
+"LSLogin"="SIGN IN";
+"LSLanguage"="Language";
+"LSRememberMe"=" Remember me";
+
+/* MenuVC screen */
+"LSMailTitle"="Mail";
+"LSInbox"= "Inbox";
+"LSSent"="Sent";
+"LSDrafts"="Drafts";
+"LSTrash"="Trash";
+"LSCalendar"="Calendar";
+"LSInvoice"="Invoice";
+
+/* Mail List Screen */
+"LSInboxTitle"="Inbox({0})";
+
+/* Notes Screen */
+"LSNotesTitle"="Notes";
+"LSEntityTitle"="Entity Name";
+"LSAccountTitle"= "Account Name";
+"LSNoNotes"="No Notes Found";
+"LSNoEvents"="No Events Found";
+
+"LSEntityCodeEmpty"="Select a entity code";
+"LSAccountCodeEmpty"="Select a account code";
+"LSFromDateEmpty"="Select a from date";
+"LSToDateEmpty"="Select a to date";
+"LSNotesHeaderTitle"="Notes Header";
+"LSNotesDetailsTitle"="Notes";
+"LSPublicTitle"=" Public";
+"LSMeTitle"=" Me Only";
+"LSSelectTitle"=" Select";

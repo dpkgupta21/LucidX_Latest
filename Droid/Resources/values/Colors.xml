@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+
+  <color name="splash_background_color">#013060</color>
+  <color name="app_bg_color">#EEEEF0</color>
+  <color name="ColorPrimary">#0e3153</color>
+  <color name="ColorAccent">#0e3153</color>
+  <color name="ColorPrimaryDark">#693D94</color>
+  <color name="white">#ffffff</color>
+  <color name="black">#000000</color>
+  <color name="transparent">#00000000</color>
+  <color name="transparent_80">#33000000</color>
+  <color name="text_selector_color">#E8E8E8</color>
+  <color name="white_transparent_50">#80ffffff</color>
+  <color name="divider_color">#818283</color>
+  <color name="side_menu_icon_color">#555555</color>
+  <color name="confirm_number_lbl_color">#AC92CF</color>
+  <color name="register_confirm_number_lbl_color">#AE98C7</color>
+  <color name="right_reserved_lbl_color">#8179AA</color>
+  <color name="drawer_right_reserved_lbl_color">#625E83</color>
+
+<!-- Custome Spinner color-->
+  <color name="dropdown">#0e3153</color>
+  <color name="blue_pop_up_header">#4676aa</color>
+  
+  <!-- EDITTEXT COLOR -->
+  <color name="et_bg_color">#ffffff</color>
+  <color name="et_text_color">#818283</color>
+  <color name="et_text_hint_color">#C0C4C8</color>
+  <color name="et_border">#C0C4C8</color>
+  <color name="text_color">#818283</color>
+
+  <!-- BUTTON COLOR -->
+  <color name="btn_bg_color">#F91159</color>
+  <color name="blue_color">#308cfc</color>
+  <color name="dark_gray_color">#808080</color>
+  <color name="gray">#bbbbbb</color>
+  
+
+  <!-- LOGIN SCREEN COLOR -->
+  <color name="login_lbl_color">#2D4159</color>
+  <color name="btn_blue_color">#01AFEE</color>
+
+  <!-- Drawer SCREEN COLOR -->
+  <color name="drawer_bg_color">#081a2c</color>
+  <color name="drawer_name_color">#37a6be</color>
+  <color name="drawer_email_color">#656a6d</color>
+  <color name="drawer_menu_mail_color">#cdc5ad</color>
+
+
+  <!-- Inbox SCREEN COLOR -->
+  <color name="label_value_color">#8e8e8e</color>
+  <color name="label_color">#222222</color>
+  <color name="seperator_vehicle">#ffffff</color>
+
+  <!-- Calendar SCREEN COLOR -->
+  <color name="background_gray">#eeeeee</color>
+  <color name="gray_text_color">#000000</color>
+  
+  
+
+  <!-- List name icon alernate COLOR -->
+  <color name="even_row_color">#00a7e4</color>
+  <color name="odd_row_color">#191d20</color>
+  <color name="light_gray_header_color">#eeeeee</color>
+  <color name="dark_gray_color">#A9A9A9</color>
+  <color name="light_blue_color">#b7ddf5</color>
+
+</resources>

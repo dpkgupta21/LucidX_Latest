@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+  <include
+      android:id="@+id/app_bar"     
+      layout="@layout/toolbar" />
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+       android:layout_below="@id/app_bar"
+      android:layout_height="wrap_content">
+
+
+    <LucidX.Droid.Source.CustomViews.CustomTextView
+        android:id="@+id/txt_from_lbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/from_lbl"
+        android:textColor="@color/black"
+        android:textSize="@dimen/tv_text_size" />
+
+    <LucidX.Droid.Source.CustomViews.CustomEditText
+        android:id="@+id/edt_from_val"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txt_from_lbl"
+        android:layout_alignTop="@+id/txt_from_lbl"
+        android:layout_toRightOf="@+id/txt_from_lbl"
+        android:background="@null"
+        android:hint="abc@example.com"
+        android:maxLines="1"
+        android:paddingLeft="20dp"
+        android:singleLine="true"
+        android:textSize="@dimen/et_text_size" />
+
+    <View
+        android:id="@+id/horizontal_from"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/edt_from_val"
+        android:background="@color/dark_gray_color" />
+
+    <LucidX.Droid.Source.CustomViews.CustomTextView
+        android:id="@+id/txt_to_lbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/horizontal_from"
+        android:padding="10dp"
+        android:text="@string/to_lbl"
+        android:textColor="@color/black"
+        android:textSize="@dimen/tv_text_size" />
+
+    <LucidX.Droid.Source.CustomViews.CustomEditText
+        android:id="@+id/edt_to_val"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txt_to_lbl"
+        android:layout_alignLeft="@id/edt_from_val"
+        android:layout_alignTop="@+id/txt_to_lbl"
+        android:layout_toRightOf="@+id/txt_to_lbl"
+        android:background="@null"
+        android:hint="abc@example.com"
+        android:maxLines="1"
+        android:paddingLeft="20dp"
+        android:singleLine="true"
+        android:textSize="@dimen/et_text_size" />
+
+    <View
+        android:id="@+id/horizontal_to"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/edt_to_val"
+        android:background="@color/dark_gray_color" />
+
+    <LucidX.Droid.Source.CustomViews.CustomTextView
+        android:id="@+id/edt_subject_val"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/horizontal_to"
+        android:background="@null"
+        android:hint="@string/subject_hint"
+        android:maxLines="1"
+        android:padding="10dp"
+        android:paddingLeft="20dp"
+        android:singleLine="true"
+        android:textSize="@dimen/et_text_size" />
+
+    <View
+        android:id="@+id/horizontal_subject"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/edt_subject_val"
+        android:background="@color/dark_gray_color" />
+
+    <LucidX.Droid.Source.CustomViews.CustomRichEditText
+        android:id="@+id/edt_compose_email_val"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/horizontal_subject"
+        android:background="@null"
+        android:hint="@string/compose_email_hint"
+        android:singleLine="false"
+        android:padding="10dp"
+        android:paddingLeft="20dp"
+        android:textSize="@dimen/et_text_size" />
+
+
+  </RelativeLayout>
+</RelativeLayout>

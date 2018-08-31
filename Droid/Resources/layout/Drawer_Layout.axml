@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="left|start"
+    android:background="@color/drawer_bg_color">
+
+  <RelativeLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/img_user"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/circle_shape" />
+
+    <LucidX.Droid.Source.CustomViews.CustomTextView
+        android:id="@+id/txt_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/img_user"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/img_user"
+        android:maxLines="1"
+        android:text="Joan Sheriff"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <LucidX.Droid.Source.CustomViews.CustomTextView
+        android:id="@+id/txt_user_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_user_name"
+        android:layout_marginTop="2dp"
+        android:layout_toRightOf="@id/img_user"
+        android:maxLines="1"
+        android:text="joan@domain.com"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="18sp"
+        android:textStyle="normal" />
+
+
+    <View
+        android:id="@+id/horizontal_line_first"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/img_user"
+        android:layout_marginTop="15dp"
+        android:background="@color/white_transparent_50" />
+
+
+    <LucidX.Droid.Source.CustomViews.CustomTextView
+        android:id="@+id/txt_mail_lbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/horizontal_line_first"
+        android:layout_marginTop="2dp"
+        android:maxLines="1"
+        android:padding="10dp"
+        android:text="Mail"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/txt_mail_lbl"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/txt_mail_lbl"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="2dp"
+        android:padding="10dp"
+        android:src="@android:drawable/arrow_down_float" />
+
+
+    <View
+        android:id="@+id/horizontal_line_second"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/txt_mail_lbl"
+        android:background="@color/white_transparent_50" />
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+  </RelativeLayout>
+</RelativeLayout>

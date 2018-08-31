@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <LucidX.Droid.Source.CustomViews.CustomTextView
+        android:id="@+id/txt_img_lbl"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:background="@android:color/holo_blue_light"
+        android:gravity="center"
+        android:padding="0dp"
+        android:text="D"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="normal" />
+
+    <LucidX.Droid.Source.CustomViews.CustomTextView
+        android:id="@+id/txt_notes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/txt_notes_date"
+        android:layout_toRightOf="@+id/txt_img_lbl"
+        android:maxLines="1"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:text="Pankaj Gupta"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <LucidX.Droid.Source.CustomViews.CustomTextView
+        android:id="@+id/txt_notes_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/txt_notes"
+        android:layout_below="@+id/txt_notes_date"
+        android:maxLines="1"
+        android:paddingLeft="10dp"
+        android:text="Pankaj Gupta"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <LucidX.Droid.Source.CustomViews.CustomTextView
+        android:id="@+id/txt_notes_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:maxLines="1"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:text="21-March"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+
+    <View
+        android:id="@+id/child_horizontal_seperator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/txt_notes_detail"
+        android:layout_marginTop="10dp"
+        android:background="@color/seperator_vehicle" />
+</RelativeLayout>

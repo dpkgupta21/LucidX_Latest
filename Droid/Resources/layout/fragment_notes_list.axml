@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:id="@+id/linear_user_and_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <LucidX.Droid.Source.CustomViews.CustomTextView
+            android:id="@+id/txt_entity_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Entity Name"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <Spinner
+            android:id="@+id/spin_current_entity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/spinner_dropdown" />
+
+        <LucidX.Droid.Source.CustomViews.CustomTextView
+            android:id="@+id/txt_account_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="Account Name"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <Spinner
+            android:id="@+id/spin_account_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/spinner_dropdown" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/relative_date_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear_user_and_type"
+        android:padding="10dp">
+
+
+        <RelativeLayout
+            android:id="@+id/relative_first"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/img_search">
+
+            <LucidX.Droid.Source.CustomViews.CustomTextView
+                android:id="@+id/txt_from_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/txt_to_lbl"
+                android:background="@drawable/edittextbg_boundary"
+                android:hint="From Date"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <LucidX.Droid.Source.CustomViews.CustomTextView
+                android:id="@+id/txt_to_lbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:padding="10dp"
+                android:text="TO"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <LucidX.Droid.Source.CustomViews.CustomTextView
+                android:id="@+id/txt_to_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/txt_to_lbl"
+                android:background="@drawable/edittextbg_boundary"
+                android:hint="To Date"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/img_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:background="@drawable/edittextbg_boundary"
+            android:padding="3dp"
+            android:layout_marginLeft="10dp"
+            android:src="@android:drawable/ic_menu_search" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/child_horizontal_seperator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/relative_date_layout"
+        android:background="@color/seperator_vehicle" />
+
+    <RelativeLayout
+        android:id="@+id/relative_second"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/child_horizontal_seperator">
+
+        <ListView
+            android:id="@+id/listview_order"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:divider="@null"
+            android:dividerHeight="0dp" />
+
+
+        <LucidX.Droid.Source.CustomViews.CustomTextView
+            android:id="@+id/txt_no_notes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="No notes found!"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/event_text_size"
+            android:textStyle="bold"
+            android:visibility="gone" />
+    </RelativeLayout>
+</RelativeLayout>

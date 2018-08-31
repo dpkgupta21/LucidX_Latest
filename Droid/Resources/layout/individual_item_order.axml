@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+  <RelativeLayout
+      android:id="@+id/relative_order_and_date"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/light_gray_header_color">
+
+    <LucidX.Droid.Source.CustomViews.CustomTextView
+        android:id="@+id/txt_order_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:maxLines="1"
+        android:padding="5dp"
+        android:text="21 March 2017"
+        android:layout_alignBottom="@+id/txt_order_name"
+        android:textColor="@color/black"
+        android:textSize="@dimen/header_order_date_size"
+        android:textStyle="normal" />
+
+    <LucidX.Droid.Source.CustomViews.CustomTextView
+        android:id="@+id/txt_order_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:maxLines="1"
+        android:layout_marginLeft="5dp"
+        android:text="Deepak Guptg"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/txt_order_date"
+        android:textColor="@color/black"
+        android:textSize="@dimen/header_order_item_size" />
+  </RelativeLayout>
+
+  <LucidX.Droid.Source.CustomViews.CustomTextView
+      android:id="@+id/txt_account_name"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/relative_order_and_date"
+      android:maxLines="1"
+      android:paddingLeft="10dp"
+      android:layout_marginTop="3dp"
+      android:text="Pankaj Gupta"
+      android:textColor="@color/black"
+      android:textSize="@dimen/header_order_item_size" />
+
+  <LucidX.Droid.Source.CustomViews.CustomTextView
+      android:id="@+id/txt_cost_lbl"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/txt_account_name"
+      android:maxLines="1"
+      android:paddingLeft="10dp"
+      android:layout_marginTop="3dp"
+      android:text="Cost :"
+      android:textColor="@color/black"
+      android:textSize="@dimen/header_order_item_size" />
+
+
+  <LucidX.Droid.Source.CustomViews.CustomTextView
+      android:id="@+id/txt_cost"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/txt_account_name"
+      android:layout_toRightOf="@id/txt_cost_lbl"
+      android:layout_alignTop="@id/txt_cost_lbl"
+      android:maxLines="1"
+      android:paddingLeft="10dp"
+      android:text="100 $"
+      android:textColor="@color/gray_text_color"
+      android:textSize="16sp" />
+
+
+  <View
+      android:id="@+id/child_horizontal_seperator"
+      android:layout_width="match_parent"
+      android:layout_height="1.5dp"
+      android:layout_marginTop="3dp"
+      android:layout_below="@id/txt_cost_lbl"
+      android:background="@color/black" />
+</RelativeLayout>

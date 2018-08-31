@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:focusable="false"
+    android:focusableInTouchMode="true"
+    android:layout_height="wrap_content">
+
+  <include
+      android:id="@+id/app_bar"
+      layout="@layout/toolbar" />
+
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_above="@+id/linear_btn"
+      android:layout_below="@+id/app_bar">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+      <Spinner
+          android:id="@+id/spin_users"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@drawable/spinner_dropdown"
+          android:layout_marginTop="10dp" />
+
+      <Spinner
+          android:id="@+id/spin_calendar_type"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/spin_users"
+          android:layout_marginTop="20dp"
+          android:background="@drawable/spinner_dropdown" />
+
+
+      <LinearLayout
+          android:id="@+id/linear_start_date_layout"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/spin_calendar_type"
+          android:orientation="horizontal"
+          android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+          <LucidX.Droid.Source.CustomViews.CustomTextView
+              android:id="@+id/txt_start_date_lbl"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="10dp"
+              android:text="Start Date"
+              android:textColor="@color/black"
+              android:textSize="16sp" />
+
+          <LucidX.Droid.Source.CustomViews.CustomTextView
+              android:id="@+id/txt_start_date_val"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="2dp"
+              android:background="@drawable/edittextbg_boundary"
+              android:maxLines="1"
+              android:text=""
+              android:textColor="@color/black"
+              android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+          <LucidX.Droid.Source.CustomViews.CustomTextView
+              android:id="@+id/txt_start_time_lbl"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="10dp"
+              android:text="Start Time"
+              android:textColor="@color/black"
+              android:textSize="16sp" />
+
+          <LucidX.Droid.Source.CustomViews.CustomTextView
+              android:id="@+id/txt_start_time_val"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="2dp"
+              android:background="@drawable/edittextbg_boundary"
+              android:maxLines="1"
+              android:text=""
+              android:textColor="@color/black"
+              android:textSize="16sp" />
+        </LinearLayout>
+      </LinearLayout>
+
+      <LinearLayout
+          android:id="@+id/linear_end_date_layout"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/linear_start_date_layout"
+          android:orientation="horizontal"
+          android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+          <LucidX.Droid.Source.CustomViews.CustomTextView
+              android:id="@+id/txt_end_date_lbl"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="10dp"
+              android:text="End Date"
+              android:textColor="@color/black"
+              android:textSize="16sp" />
+
+          <LucidX.Droid.Source.CustomViews.CustomTextView
+              android:id="@+id/txt_end_date_val"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="2dp"
+              android:background="@drawable/edittextbg_boundary"
+              android:maxLines="1"
+              android:text=""
+              android:textColor="@color/black"
+              android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+          <LucidX.Droid.Source.CustomViews.CustomTextView
+              android:id="@+id/txt_end_time_lbl"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="10dp"
+              android:text="End Time"
+              android:textColor="@color/black"
+              android:textSize="16sp" />
+
+          <LucidX.Droid.Source.CustomViews.CustomTextView
+              android:id="@+id/txt_end_time_val"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="2dp"
+              android:background="@drawable/edittextbg_boundary"
+              android:maxLines="1"
+              android:text=""
+              android:textColor="@color/black"
+              android:textSize="16sp" />
+        </LinearLayout>
+      </LinearLayout>
+
+      <LucidX.Droid.Source.CustomViews.CustomTextView
+          android:id="@+id/txt_subject_lbl"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/linear_end_date_layout"
+          android:layout_marginTop="10dp"
+          android:text="Subject"
+          android:textColor="@color/black"
+          android:textSize="16sp" />
+
+      <LucidX.Droid.Source.CustomViews.CustomEditText
+          android:id="@+id/txt_subject_val"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/txt_subject_lbl"
+          android:layout_marginTop="2dp"
+          android:background="@drawable/edittextbg_boundary"
+          android:maxLines="1"
+          android:text=""
+          android:textColor="@color/black"
+          android:textSize="16sp" />
+
+      <LucidX.Droid.Source.CustomViews.CustomTextView
+          android:id="@+id/txt_description_lbl"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/txt_subject_val"
+          android:layout_marginTop="10dp"
+          android:text="Description"
+          android:textColor="@color/black"
+          android:textSize="16sp" />
+
+      <LucidX.Droid.Source.CustomViews.CustomEditText
+          android:id="@+id/txt_description_val"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/txt_description_lbl"
+          android:layout_marginTop="2dp"
+          android:background="@drawable/edittextbg_boundary"
+          android:gravity="start"
+          android:minLines="3"
+          android:text=""
+          android:textColor="@color/black"
+          android:textSize="16sp" />
+    </RelativeLayout>
+  </ScrollView>
+
+  <LinearLayout
+      android:id="@+id/linear_btn"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:orientation="horizontal"
+      android:padding="10dp"
+      android:weightSum="2">
+
+    <LucidX.Droid.Source.CustomViews.CustomButton
+        android:id="@+id/btn_save"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/btn_color_selector"
+        android:text="Save"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <LucidX.Droid.Source.CustomViews.CustomButton
+        android:id="@+id/btn_cancel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_weight="1"
+        android:background="@drawable/btn_color_selector"
+        android:text="Cancel"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+  </LinearLayout>
+</RelativeLayout>

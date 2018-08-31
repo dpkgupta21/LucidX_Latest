@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  	<dimen name="margin_15">15dp</dimen>
+  <dimen name="margin_10">10dp</dimen>
+  <dimen name="margin_20">20dp</dimen>
+  <dimen name="margin_5">5dp</dimen>
+  <dimen name="tv_heading">22sp</dimen>
+  <dimen name="tv_text_size">18sp</dimen>
+  <dimen name="tv_big_heading">18sp</dimen>
+  <dimen name="divider_height">1dp</dimen>
+  <dimen name="btn_rounded_corner_radius">4dp</dimen>
+  <dimen name="text_padding">15dp</dimen>
+  <dimen name="drawer_width">100dp</dimen>
+  
+
+  <!-- EDITTEXT -->
+  <dimen name="et_padding">9dp</dimen>
+  <dimen name="et_text_size">18dp</dimen>
+  <dimen name="et_rounded_corner_radius">4dp</dimen>
+  <dimen name="et_mar_top">10dp</dimen>
+  <dimen name="et_mar_left">30dp</dimen>
+
+
+  <dimen name="btn_radius">5dp</dimen>
+  <dimen name="btn_text_size">16sp</dimen>
+
+  <!--Common Dialog-->
+  <dimen name="common_dialog_image_text_text_size">36sp</dimen>
+  <dimen name="common_dialog_simple_text_text_size">25sp</dimen>
+  <dimen name="common_dialog_parent_container_padd">20dp</dimen>
+  <dimen name="common_dialog_items_mar">32dp</dimen>
+
+
+  <!--Calendar Event details-->
+  <dimen name="event_text_size">22sp</dimen>
+  <dimen name="group_text_size">18sp</dimen>
+  <dimen name="run_child_text">18sp</dimen>
+
+  <!-- Spinner item text-->
+  <dimen name="spinner_item_text">17sp</dimen>
+  
+  <!--Order items in list -->
+  <dimen name="header_order_item_size">16sp</dimen>
+  <dimen name="header_order_date_size">12sp</dimen>
+  <dimen name="button_in_order_size">18sp</dimen>
+</resources>

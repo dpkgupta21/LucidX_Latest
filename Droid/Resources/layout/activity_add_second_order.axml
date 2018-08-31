@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <LucidX.Droid.Source.CustomViews.CustomTextView
+      android:id="@+id/txt_page_number_lbl"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:padding="5dp"
+      android:background="@color/light_blue_color"
+      android:text="2/3"
+      android:textColor="@color/black"
+      android:textSize="16sp" />
+
+
+  <LinearLayout
+      android:id="@+id/linear_lisview"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_above="@+id/linear_layout_btn"
+      android:layout_below="@id/txt_page_number_lbl"
+      android:background="@color/background_gray"
+      android:orientation="horizontal">
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/black"
+        android:dividerHeight="1dp" />
+
+    <LucidX.Droid.Source.CustomViews.CustomTextView
+        android:id="@+id/txt_no_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="No Orders"
+        android:textColor="@color/black"
+        android:textSize="@dimen/header_order_item_size"
+        android:textStyle="bold"
+        android:visibility="gone" />
+  </LinearLayout>
+
+  <LinearLayout
+      android:id="@+id/linear_layout_btn"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:orientation="horizontal"
+      android:padding="10dp"
+      android:weightSum="2">
+
+    <LucidX.Droid.Source.CustomViews.CustomButton
+        android:id="@+id/btn_add_order"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/btn_color_selector"
+        android:text="Add"
+        android:textColor="@color/black"
+        android:textSize="@dimen/button_in_order_size" />
+
+    <LucidX.Droid.Source.CustomViews.CustomButton
+        android:id="@+id/btn_next"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_weight="1"
+        android:background="@drawable/btn_color_selector"
+        android:text="Next"
+        android:textColor="@color/black"
+        android:textSize="@dimen/button_in_order_size" />
+  </LinearLayout>
+</RelativeLayout>

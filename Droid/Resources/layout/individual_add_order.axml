@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+  <RelativeLayout
+      android:id="@+id/relative_account_name"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/light_gray_header_color"
+      android:paddingBottom="5dp">
+
+    <LucidX.Droid.Source.CustomViews.CustomTextView
+        android:id="@+id/txt_account_name_lbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:paddingLeft="10dp"
+        android:text="Account Name: "
+        android:textColor="@color/black"
+        android:textSize="@dimen/header_order_item_size"
+        android:textStyle="bold" />
+
+    <LucidX.Droid.Source.CustomViews.CustomTextView
+        android:id="@+id/txt_account_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/txt_account_name_lbl"
+        android:maxLines="1"
+        android:paddingLeft="10dp"
+        android:text="Account"
+        android:textColor="@color/black"
+        android:textSize="@dimen/header_order_item_size" />
+  </RelativeLayout>
+
+  <RelativeLayout
+      android:id="@+id/relative"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentLeft="true"
+      android:layout_below="@id/relative_account_name"
+      android:layout_toLeftOf="@+id/relative_btn"
+      android:background="@color/white"
+      android:paddingBottom="5dp">
+
+    <LucidX.Droid.Source.CustomViews.CustomTextView
+        android:id="@+id/txt_item_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:paddingLeft="10dp"
+        android:text="Item Description"
+        android:textColor="@color/black"
+        android:textSize="@dimen/header_order_item_size"
+        android:textStyle="normal" />
+
+    <LucidX.Droid.Source.CustomViews.CustomTextView
+        android:id="@+id/txt_base_amount_lbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_item_description"
+        android:maxLines="1"
+        android:paddingLeft="10dp"
+        android:text="Base Amount :"
+        android:textColor="@color/gray_text_color"
+        android:textSize="@dimen/header_order_item_size" />
+
+
+    <LucidX.Droid.Source.CustomViews.CustomTextView
+        android:id="@+id/txt_base_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_item_description"
+        android:layout_toRightOf="@id/txt_base_amount_lbl"
+        android:maxLines="1"
+        android:paddingLeft="10dp"
+        android:text="100 $"
+        android:textColor="@color/gray_text_color"
+        android:textSize="@dimen/header_order_item_size" />
+
+    <LucidX.Droid.Source.CustomViews.CustomTextView
+        android:id="@+id/txt_tax_amount_lbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_base_amount"
+        android:maxLines="1"
+        android:paddingLeft="10dp"
+        android:text="Tax Amount :"
+        android:textColor="@color/gray_text_color"
+        android:textSize="@dimen/header_order_item_size" />
+
+    <LucidX.Droid.Source.CustomViews.CustomTextView
+        android:id="@+id/txt_tax_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_base_amount"
+        android:layout_toRightOf="@id/txt_tax_amount_lbl"
+        android:maxLines="1"
+        android:paddingLeft="10dp"
+        android:text="100 $"
+        android:textColor="@color/gray_text_color"
+        android:textSize="@dimen/header_order_item_size" />
+
+  </RelativeLayout>
+
+  <RelativeLayout
+      android:id="@+id/relative_btn"
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:layout_alignBottom="@+id/relative"
+      android:layout_alignParentRight="true"
+      android:gravity="center"
+      android:layout_centerInParent="true"
+      android:layout_below="@+id/relative_account_name"
+      android:background="@color/dark_gray_color">
+
+    <ImageView
+        android:id="@+id/img_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:src="@drawable/edit" />
+  </RelativeLayout>
+
+  <View
+      android:id="@+id/child_horizontal_seperator"
+      android:layout_width="match_parent"
+      android:layout_height="1dp"
+      android:layout_below="@id/relative"
+      android:background="@color/black" />
+</RelativeLayout>

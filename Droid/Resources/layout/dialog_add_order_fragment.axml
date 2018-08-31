@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_rounded"
+    android:paddingTop="4dp">
+
+  <LucidX.Droid.Source.CustomViews.CustomTextView
+      android:id="@+id/txt_dialog_title"
+      style="@style/tv_style"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentTop="true"
+      android:layout_centerInParent="true"
+      android:gravity="center_horizontal"
+      android:text="Order Line Item"
+      android:textColor="@color/black" />
+
+  <ImageView
+      android:id="@+id/img_delete"
+      android:layout_width="30dp"
+      android:layout_height="30dp"
+      android:layout_alignTop="@+id/txt_dialog_title"
+      android:layout_alignBottom="@+id/txt_dialog_title"
+      android:layout_alignParentRight="true"
+      android:paddingRight="10dp"
+      android:src="@drawable/delet"/>
+  <View
+      android:id="@+id/horizontal_line"
+      android:layout_width="match_parent"
+      android:layout_height=".5dp"
+      android:layout_below="@id/txt_dialog_title"
+      android:background="@android:color/darker_gray" />
+
+
+  <RelativeLayout
+      android:id="@+id/relative_layout"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/horizontal_line"
+      android:padding="10dp">
+
+
+    <LucidX.Droid.Source.CustomViews.CustomTextView
+        android:id="@+id/txt_item_desc_lbl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Item Description"
+        android:textColor="@color/black"
+        android:textSize="@dimen/header_order_item_size" />
+
+    <LucidX.Droid.Source.CustomViews.CustomEditText
+        android:id="@+id/edt_item_desc_val"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_item_desc_lbl"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/edittextbg_boundary"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="@dimen/header_order_item_size" />
+
+    <LucidX.Droid.Source.CustomViews.CustomTextView
+        android:id="@+id/txt_revenue_account_lbl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edt_item_desc_val"
+        android:layout_marginTop="10dp"
+        android:text="Revenue A/c"
+        android:textColor="@color/black"
+        android:textSize="@dimen/header_order_item_size" />
+
+    <Spinner
+        android:id="@+id/spin_revenue_account_val"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_revenue_account_lbl"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/spinner_dropdown" />
+
+
+    <LucidX.Droid.Source.CustomViews.CustomTextView
+        android:id="@+id/txt_tax_rates_lbl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spin_revenue_account_val"
+        android:layout_marginTop="10dp"
+        android:text="Tax Type"
+        android:textColor="@color/black"
+        android:textSize="@dimen/header_order_item_size" />
+
+    <Spinner
+        android:id="@+id/spin_tax_rates_val"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_tax_rates_lbl"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/spinner_dropdown" />
+
+    <LucidX.Droid.Source.CustomViews.CustomTextView
+        android:id="@+id/txt_amount_lbl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spin_tax_rates_val"
+        android:layout_marginTop="10dp"
+        android:text="Amount"
+        android:textColor="@color/black"
+        android:textSize="@dimen/header_order_item_size" />
+
+    <LucidX.Droid.Source.CustomViews.CustomEditText
+        android:id="@+id/edt_amount_val"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_amount_lbl"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/edittextbg_boundary"
+        android:inputType="numberDecimal"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="@dimen/header_order_item_size" />
+
+    <LucidX.Droid.Source.CustomViews.CustomTextView
+        android:id="@+id/txt_vat_lbl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edt_amount_val"
+        android:layout_marginTop="10dp"
+        android:text="Vat"
+        android:textColor="@color/black"
+        android:textSize="@dimen/header_order_item_size" />
+
+    <LucidX.Droid.Source.CustomViews.CustomEditText
+        android:id="@+id/edt_vat_val"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_vat_lbl"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/edittextbg_disabled"
+        android:inputType="numberDecimal"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text=""
+        android:enabled="false"
+        android:textColor="@color/black"
+        android:textSize="@dimen/header_order_item_size" />
+  </RelativeLayout>
+
+  <LinearLayout
+      android:id="@+id/linear_btn"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/relative_layout"
+      android:orientation="horizontal"
+      android:padding="10dp"
+      android:weightSum="2">
+
+    <LucidX.Droid.Source.CustomViews.CustomButton
+        android:id="@+id/btn_save"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/btn_color_selector"
+        android:text="Ok"
+        android:textColor="@color/black"
+        android:textSize="@dimen/button_in_order_size" />
+
+    <LucidX.Droid.Source.CustomViews.CustomButton
+        android:id="@+id/btn_cancel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_weight="1"
+        android:background="@drawable/btn_color_selector"
+        android:text="Cancel"
+        android:textColor="@color/black"
+        android:textSize="@dimen/button_in_order_size" />
+  </LinearLayout>
+</RelativeLayout>

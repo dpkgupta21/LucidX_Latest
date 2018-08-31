@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+  <RelativeLayout
+      android:id="@+id/relative_container"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/white"
+      android:paddingTop="2dp">
+
+    <LucidX.Droid.Source.CustomViews.CustomTextView
+        android:id="@+id/txt_event_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:maxLines="1"
+        android:paddingLeft="10dp"
+        android:text="Deepak"
+        android:textColor="@color/gray_text_color"
+        android:textSize="16sp"
+        android:textStyle="normal" />
+
+    <LucidX.Droid.Source.CustomViews.CustomTextView
+        android:id="@+id/txt_event_date_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:maxLines="1"
+        android:paddingRight="10dp"
+        android:text="8:13 pm"
+        android:textColor="@color/gray_text_color"
+        android:textSize="14sp" />
+
+  </RelativeLayout>
+
+  <LucidX.Droid.Source.CustomViews.CustomTextView
+      android:id="@+id/txt_event_detail"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/relative_container"
+      android:layout_toLeftOf="@+id/img_delete"
+      android:maxLines="1"
+      android:paddingLeft="10dp"
+      android:text="Have a meeting! "
+      android:textColor="@color/gray_text_color"
+      android:textSize="16sp" />
+
+  <ImageView
+      android:id="@+id/img_delete"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentRight="true"
+      android:layout_below="@id/relative_container"
+      android:paddingLeft="10dp"
+      android:paddingRight="10dp"
+      android:src="@android:drawable/ic_menu_delete" />
+
+  <View
+      android:id="@+id/child_horizontal_seperator"
+      android:layout_width="match_parent"
+      android:layout_height="1dp"
+      android:layout_below="@id/img_delete"
+      android:background="@color/seperator_vehicle" />
+</RelativeLayout>

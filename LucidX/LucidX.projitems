@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{F8AC9129-6615-4D26-B8D1-C5236F30EA84}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>LucidX</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Constants\WebserviceConstants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RequestModels\LedgerOrderItemsAPIParams.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RequestModels\ShowTaxRatesAPIParams.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RequestModels\ShowUserCurrencyAPIParams.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RequestModels\AccountCodeAPIParams.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RequestModels\AddCalendarEventsAPIParams.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RequestModels\AccountOrdersAPIParams.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RequestModels\OrdersAPIParams.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RequestModels\CalendarEventsAPIParams.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RequestModels\DeleteEventsAPIParams.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RequestModels\DeleteNotesAPIParams.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RequestModels\EntityCodeAPIParams.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RequestModels\CrmNotesAPIParams.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RequestModels\AddNotesAPIParams.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RequestModels\EmailDetailsAPIParams.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RequestModels\InboxEmailApiParams.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RequestModels\MarkReadEmailApiParams.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RequestModels\EmailCountsAPIParams.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RequestModels\LoginAPIParams.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RequestModels\ShowNotesTypeAPIParams.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RequestModels\RefUsersAPIParams.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ResponseModels\ShowTaxRatesResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ResponseModels\LedgerOrder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ResponseModels\LedgerOrderItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ResponseModels\LedgerOrderItemsResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ResponseModels\ShowUserCurrencyResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ResponseModels\AccountOrdersResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ResponseModels\AccountCodesResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ResponseModels\EntityCodesResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ResponseModels\CrmNotesResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ResponseModels\EmailCountResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ResponseModels\CalendarEventResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ResponseModels\FinalResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ResponseModels\EmailResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ResponseModels\LoginResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ResponseModels\NotesTypeResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ResponseModels\RefUsersResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utils\ResultDoc.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Webservices\WebServiceHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Webservices\WebServiceMethods.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utils\Utilities.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Constants\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Webservices\" />
+  </ItemGroup>
+</Project>

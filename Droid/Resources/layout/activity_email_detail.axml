@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:color="@color/white">
+
+  <include
+      android:id="@+id/app_bar"
+      layout="@layout/toolbar" />
+
+  <RelativeLayout
+      android:id="@+id/layout_main"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_below="@+id/app_bar">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+      <LucidX.Droid.Source.CustomViews.CustomTextView
+          android:id="@+id/txt_subject_val"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentLeft="true"
+          android:layout_toLeftOf="@+id/txt_inbox_lbl"
+          android:maxLines="3"
+          android:padding="10dp"
+          android:text="API Doc with email detail dsklvl ds lkn nln dl ndnl kndl dn ldn ldn kdn ldn d kndl ndkj dk  "
+          android:textColor="@color/black"
+          android:textSize="18sp" />
+
+      <LucidX.Droid.Source.CustomViews.CustomTextView
+          android:id="@+id/txt_inbox_lbl"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentRight="true"
+          android:layout_alignTop="@+id/txt_subject_val"
+          android:layout_margin="10dp"
+          android:layout_marginTop="15dp"
+          android:background="#bbbbbb"
+          android:maxLines="1"
+          android:padding="5dp"
+          android:text="Inbox"
+          android:textColor="@color/black"
+          android:textSize="14sp" />
+
+
+      <View
+          android:id="@+id/horizontal_first"
+          android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:layout_below="@id/txt_subject_val"
+          android:background="@android:color/darker_gray" />
+
+      <LucidX.Droid.Source.CustomViews.CustomTextView
+          android:id="@+id/txt_img_lbl"
+          android:layout_width="40dp"
+          android:layout_height="40dp"
+          android:layout_below="@id/horizontal_first"
+          android:layout_margin="10dp"
+          android:background="@drawable/circle_shape"
+          android:gravity="center"
+          android:text="D"
+          android:textAllCaps="true"
+          android:textColor="@color/white"
+          android:textSize="30sp"
+          android:textStyle="normal" />
+
+      <LucidX.Droid.Source.CustomViews.CustomTextView
+          android:id="@+id/txt_sender_name"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignTop="@+id/txt_img_lbl"
+          android:layout_marginLeft="10dp"
+          android:layout_toLeftOf="@+id/img_reply_icon"
+          android:layout_toRightOf="@+id/txt_img_lbl"
+          android:maxLines="1"
+          android:text="Pankaj Gupta"
+          android:textColor="@color/black"
+          android:textSize="16sp" />
+
+      <ImageView
+          android:id="@+id/img_reply_icon"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignTop="@+id/txt_img_lbl"
+          android:layout_marginLeft="10dp"
+          android:layout_toLeftOf="@+id/img_more_icon"
+          android:paddingLeft="5dp"
+          android:src="@drawable/reply_icon" />
+
+
+      <ImageView
+          android:id="@+id/img_more_icon"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentRight="true"
+          android:layout_alignTop="@+id/txt_img_lbl"
+          android:paddingLeft="5dp"
+          android:src="@drawable/more" />
+
+
+    </RelativeLayout>
+    <ScrollView
+       android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       android:layout_above="@+id/footer"
+        android:layout_below="@id/header">
+    <LucidX.Droid.Source.CustomViews.CustomTextView
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp" />
+    </ScrollView>
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+      <View
+          android:id="@+id/horizontal_second"
+          android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:background="@android:color/darker_gray" />
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/horizontal_second"
+          android:orientation="horizontal"
+          android:padding="3dp"
+          android:weightSum="3">
+
+        <LucidX.Droid.Source.CustomViews.CustomTextView
+            android:id="@+id/txt_reply"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/reply_icon"
+            android:gravity="center_horizontal"
+            android:text="Reply"
+            android:textColor="@color/text_color"
+            android:textSize="16sp" />
+
+        <LucidX.Droid.Source.CustomViews.CustomTextView
+            android:id="@+id/txt_reply_all"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/reply_icon"
+            android:gravity="center_horizontal"
+            android:text="Reply All"
+            android:textColor="@color/text_color"
+            android:textSize="16sp" />
+
+        <LucidX.Droid.Source.CustomViews.CustomTextView
+            android:id="@+id/txt_reply_forward"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/forward_mail"
+            android:gravity="center_horizontal"
+            android:text="Forward"
+            android:textColor="@color/text_color"
+            android:textSize="16sp" />
+      </LinearLayout>
+    </RelativeLayout>
+  </RelativeLayout>
+
+</RelativeLayout>

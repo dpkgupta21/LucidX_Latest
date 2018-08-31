@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OrderListVC">
+            <connections>
+                <outlet property="IBContntTbl" destination="wRU-Sy-wM3" id="PgU-L1-A2F"/>
+                <outlet property="IBDateDoneBar" destination="4cM-YI-s7V" id="SR8-zL-YmZ"/>
+                <outlet property="IBDatePicker" destination="Etc-wk-LJl" id="a1S-4R-BSL"/>
+                <outlet property="IBEndDateTxt" destination="uFW-J5-Qly" id="MrL-cd-IsL"/>
+                <outlet property="IBSearchBtn" destination="pTu-Jj-7ns" id="cNV-KP-ApM"/>
+                <outlet property="IBStartDateTxt" destination="08C-OQ-sdf" id="BZ1-da-Nyi"/>
+                <outlet property="IBToLbl" destination="hcs-tG-EQW" id="XXa-AE-xrn"/>
+                <outlet property="view" destination="2" id="RRd-Eg-VrN"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="2">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rdR-Zf-RHE">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="46"/>
+                    <subviews>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="08C-OQ-sdf">
+                            <rect key="frame" x="8" y="7" width="114.5" height="32"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="rIG-Wb-Tlp"/>
+                            </connections>
+                        </textField>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcs-tG-EQW">
+                            <rect key="frame" x="130.5" y="7" width="19" height="32"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uFW-J5-Qly">
+                            <rect key="frame" x="157" y="7" width="114.5" height="32"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="t2x-FV-frv"/>
+                            </connections>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pTu-Jj-7ns">
+                            <rect key="frame" x="280" y="7" width="32" height="32"/>
+                            <state key="normal" image="Search"/>
+                            <connections>
+                                <action selector="IBSearchClicked:" destination="-1" eventType="touchUpInside" id="NUA-KZ-eOe"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="pTu-Jj-7ns" secondAttribute="trailing" constant="8" id="6Gf-xV-Zjj"/>
+                        <constraint firstItem="08C-OQ-sdf" firstAttribute="top" secondItem="rdR-Zf-RHE" secondAttribute="top" constant="7" id="9l8-mD-VWD"/>
+                        <constraint firstItem="08C-OQ-sdf" firstAttribute="leading" secondItem="rdR-Zf-RHE" secondAttribute="leading" constant="8" id="Gdw-IY-xQ9"/>
+                        <constraint firstItem="uFW-J5-Qly" firstAttribute="top" secondItem="rdR-Zf-RHE" secondAttribute="top" constant="7" id="Lmt-0P-gEn"/>
+                        <constraint firstAttribute="bottom" secondItem="uFW-J5-Qly" secondAttribute="bottom" constant="7" id="Lus-Jz-FTg"/>
+                        <constraint firstAttribute="bottom" secondItem="08C-OQ-sdf" secondAttribute="bottom" constant="7" id="M7d-ZF-sjc"/>
+                        <constraint firstItem="pTu-Jj-7ns" firstAttribute="leading" secondItem="uFW-J5-Qly" secondAttribute="trailing" constant="8" id="VHj-3A-gvw"/>
+                        <constraint firstItem="hcs-tG-EQW" firstAttribute="top" secondItem="rdR-Zf-RHE" secondAttribute="top" constant="7" id="jWc-VT-yPp"/>
+                        <constraint firstAttribute="bottom" secondItem="pTu-Jj-7ns" secondAttribute="bottom" constant="7" id="lba-tY-Bga"/>
+                        <constraint firstItem="pTu-Jj-7ns" firstAttribute="top" secondItem="rdR-Zf-RHE" secondAttribute="top" constant="7" id="pUf-oH-J7y"/>
+                        <constraint firstItem="uFW-J5-Qly" firstAttribute="leading" secondItem="hcs-tG-EQW" secondAttribute="trailing" constant="8" id="pWZ-5B-dKE"/>
+                        <constraint firstItem="hcs-tG-EQW" firstAttribute="leading" secondItem="08C-OQ-sdf" secondAttribute="trailing" constant="8" id="tsu-jm-yjM"/>
+                        <constraint firstAttribute="bottom" secondItem="hcs-tG-EQW" secondAttribute="bottom" constant="7" id="w5z-hv-8jE"/>
+                        <constraint firstItem="08C-OQ-sdf" firstAttribute="width" secondItem="uFW-J5-Qly" secondAttribute="width" id="yHn-YV-2hn"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wRU-Sy-wM3">
+                    <rect key="frame" x="0.0" y="46" width="320" height="434"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="PQp-fS-g7b"/>
+                        <outlet property="delegate" destination="-1" id="9Xg-iW-TUi"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="rdR-Zf-RHE" firstAttribute="leading" secondItem="2" secondAttribute="leading" id="BE0-ij-RrA"/>
+                <constraint firstAttribute="trailing" secondItem="wRU-Sy-wM3" secondAttribute="trailing" id="BHd-Vl-Z9f"/>
+                <constraint firstAttribute="bottom" secondItem="wRU-Sy-wM3" secondAttribute="bottom" id="FAg-jE-po9"/>
+                <constraint firstItem="wRU-Sy-wM3" firstAttribute="leading" secondItem="2" secondAttribute="leading" id="Y5E-I8-xo8"/>
+                <constraint firstItem="wRU-Sy-wM3" firstAttribute="top" secondItem="rdR-Zf-RHE" secondAttribute="bottom" id="ZdU-F5-xiO"/>
+                <constraint firstAttribute="trailing" secondItem="rdR-Zf-RHE" secondAttribute="trailing" id="gJI-w5-Vt0"/>
+                <constraint firstItem="rdR-Zf-RHE" firstAttribute="top" secondItem="2" secondAttribute="top" id="n1Z-fZ-Gwk"/>
+            </constraints>
+        </view>
+        <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="4cM-YI-s7V">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+            <items>
+                <barButtonItem style="plain" systemItem="flexibleSpace" id="dwJ-xS-qKq"/>
+                <barButtonItem style="done" systemItem="done" id="bSr-f0-06C">
+                    <connections>
+                        <action selector="DoneClicked:" destination="-1" id="0E4-5Z-UFm"/>
+                    </connections>
+                </barButtonItem>
+            </items>
+            <point key="canvasLocation" x="-11" y="381"/>
+        </toolbar>
+        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" id="Etc-wk-LJl">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="216"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+            <date key="date" timeIntervalSinceReferenceDate="521304872.61437303">
+                <!--2017-07-09 14:54:32 +0000-->
+            </date>
+            <connections>
+                <action selector="IBDateChanged:" destination="-1" eventType="valueChanged" id="CZe-OX-aun"/>
+            </connections>
+            <point key="canvasLocation" x="-3" y="569"/>
+        </datePicker>
+    </objects>
+    <resources>
+        <image name="Search" width="32" height="32"/>
+    </resources>
+</document>

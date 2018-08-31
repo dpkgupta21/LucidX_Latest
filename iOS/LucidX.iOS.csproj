@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectGuid>{9C0D831C-F1F4-4627-8740-6F6EA7DEF97B}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>LucidX.iOS</RootNamespace>
+    <AssemblyName>LucidX.iOS</AssemblyName>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchFastDev>true</MtouchFastDev>
+    <IOSDebuggerPort>10472</IOSDebuggerPort>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchTlsProvider>Default</MtouchTlsProvider>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Distribution: ELUCIDATE SOFTWARE LIMITED (PBM7J6894U)</CodesignKey>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchTlsProvider>Default</MtouchTlsProvider>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodesignProvision>educide</CodesignProvision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchTlsProvider>Default</MtouchTlsProvider>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchFastDev>true</MtouchFastDev>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchTlsProvider>Default</MtouchTlsProvider>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="Plugin.Connectivity.Abstractions">
+      <HintPath>..\packages\Xam.Plugin.Connectivity.2.3.0\lib\Xamarin.iOS10\Plugin.Connectivity.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Connectivity">
+      <HintPath>..\packages\Xam.Plugin.Connectivity.2.3.0\lib\Xamarin.iOS10\Plugin.Connectivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Serialization" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net" />
+    <Reference Include="Plugin.Settings.Abstractions">
+      <HintPath>..\packages\Xam.Plugins.Settings.2.5.4\lib\Xamarin.iOS10\Plugin.Settings.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Settings">
+      <HintPath>..\packages\Xam.Plugins.Settings.2.5.4\lib\Xamarin.iOS10\Plugin.Settings.dll</HintPath>
+    </Reference>
+    <Reference Include="MBProgressHUD">
+      <HintPath>..\packages\mbprogresshud.0.9.2.0\lib\Xamarin.iOS\MBProgressHUD.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="Xamarin.SWRevealViewController">
+      <HintPath>..\packages\Xamarin.SWRevealViewController.2.3.0\lib\Xamarin.iOS\Xamarin.SWRevealViewController.dll</HintPath>
+    </Reference>
+    <Reference Include="TPKeyboardAvoiding">
+      <HintPath>..\packages\TPKeyBoard\TPKeyboardAvoiding.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\Logo.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\User.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\Password.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\Language.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\Language.imageset\language-icon.png" />
+    <ImageAsset Include="Resources\Images.xcassets\User.imageset\user-icon.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Password.imageset\password-icon.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ButtonBG.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\ButtonBG.imageset\button-bg.jpg" />
+    <ImageAsset Include="Resources\Images.xcassets\Background.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\Background.imageset\app-bg.jpg" />
+    <ImageAsset Include="Resources\Images.xcassets\Background.imageset\iOS-Iphone5-SE%402x.jpg" />
+    <ImageAsset Include="Resources\Images.xcassets\Radiooff.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\RadioOn.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\RadioOn.imageset\radio-active%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\RadioOn.imageset\radio-active%402x copy.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Radiooff.imageset\radio%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Radiooff.imageset\radio%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\RememberMeOff.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\RememberMeOff.imageset\remember-me-check-box%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\RememberMeOn.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\RememberMeOn.imageset\remember-me-check-box-right%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Menu.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\Reply.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\ReplyAll.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\Forward.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\LineMenu.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\Inbox.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\Trash.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\Sent.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\Drafts.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\Invoice.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\Calendar.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\LineMenu.imageset\menu.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LineMenu.imageset\menu%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LineMenu.imageset\menu%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Menu.imageset\menu.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Menu.imageset\menu%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Menu.imageset\menu%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Reply.imageset\reply.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Reply.imageset\reply%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Reply.imageset\reply%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ReplyAll.imageset\reply-all.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ReplyAll.imageset\reply-all%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ReplyAll.imageset\reply-all%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Forward.imageset\forward.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Forward.imageset\forward%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Forward.imageset\forward%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Inbox.imageset\Inbox.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Trash.imageset\trash.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Sent.imageset\sent.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Drafts.imageset\draft.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Invoice.imageset\Invoice.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Refresh.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\Edit.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\Edit.imageset\1491657837_new-24.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Edit.imageset\1491657834_new-24.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Edit.imageset\1491657827_new-24.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Refresh.imageset\1491657788_black_2_audio_simple_repeat_2.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Refresh.imageset\1491657783_black_2_audio_simple_repeat_2.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Refresh.imageset\1491657776_black_2_audio_simple_repeat_2.png" />
+    <ImageAsset Include="Resources\Images.xcassets\DataBaseUnSelected.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\DataBaseSelected.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\DataBaseUnSelected.imageset\radio.png" />
+    <ImageAsset Include="Resources\Images.xcassets\DataBaseSelected.imageset\database-active%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\DataBaseSelected.imageset\database-active%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\DataBaseUnSelected.imageset\radio%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\DataBaseUnSelected.imageset\radio%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Search.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\Search.imageset\search.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Search.imageset\search%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Search.imageset\search%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Add.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\Add.imageset\add.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Add.imageset\add%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Add.imageset\add%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Delete.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\Delete.imageset\delete.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Delete.imageset\delete%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Delete.imageset\delete%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\RadioUnselect.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\RadioSelect.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\RadioUnselect.imageset\radio-button-off.png" />
+    <ImageAsset Include="Resources\Images.xcassets\RadioUnselect.imageset\radio-button-off%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\RadioSelect.imageset\radio-button-on.png" />
+    <ImageAsset Include="Resources\Images.xcassets\RadioSelect.imageset\radio-button-on%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\DropArrow.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\SideArrow.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\DropArrow.imageset\arrow-drop-down.png" />
+    <ImageAsset Include="Resources\Images.xcassets\DropArrow.imageset\arrow-drop-down%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\DropArrow.imageset\arrow-drop-down%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\SideArrow.imageset\arrow-drop-down.png" />
+    <ImageAsset Include="Resources\Images.xcassets\SideArrow.imageset\arrow-drop-down%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\SideArrow.imageset\arrow-drop-down%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-29x29%401x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-29x29%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-29x29%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-40x40%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-40x40%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-57x57%401x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-57x57%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-60x60%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-60x60%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-40x40%401x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Small-50x50%401x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Small-50x50%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-72x72%401x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-72x72%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-76x76%401x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-76x76%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-83.5x83.5%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Logo.imageset\Icon-App-40x40%401x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Logo.imageset\Icon-App-40x40%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Logo.imageset\Icon-App-40x40%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\CalendarAdd.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\Notes.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\Notes.imageset\notes_list.png" />
+    <ImageAsset Include="Resources\Images.xcassets\NotesAdd.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\NotesAdd.imageset\add_notes.png" />
+    <ImageAsset Include="Resources\Images.xcassets\CalendarAdd.imageset\add_event.png" />
+    <ImageAsset Include="Resources\Images.xcassets\NotesAmend.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\NotesAmend.imageset\add_notes.png" />
+    <ImageAsset Include="Resources\Images.xcassets\NotesDelete.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\NotesDelete.imageset\trash.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Orders.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\Orders.imageset\order_list.png" />
+    <ImageAsset Include="Resources\Images.xcassets\OrderAmend.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\OrderConvert.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\OrderAdd.imageset\add_order.png" />
+    <ImageAsset Include="Resources\Images.xcassets\OrderAdd.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\Logout.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\OrderConvert.imageset\order_list.png" />
+    <ImageAsset Include="Resources\Images.xcassets\OrderAmend.imageset\add_order.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Calendar.imageset\calendar.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Back.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\Back.imageset\if_icon-ios7-arrow-back_211686 %282%29.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Back.imageset\if_icon-ios7-arrow-back_211686 %281%29.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Back.imageset\if_icon-ios7-arrow-back_211686.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="Utils\" />
+    <Folder Include="Resources\Images.xcassets\Logo.imageset\" />
+    <Folder Include="Resources\Images.xcassets\User.imageset\" />
+    <Folder Include="Resources\Images.xcassets\Password.imageset\" />
+    <Folder Include="Resources\Images.xcassets\Language.imageset\" />
+    <Folder Include="Resources\Images.xcassets\ButtonBG.imageset\" />
+    <Folder Include="Resources\Images.xcassets\Background.imageset\" />
+    <Folder Include="Resources\Images.xcassets\Radiooff.imageset\" />
+    <Folder Include="Resources\Images.xcassets\RadioOn.imageset\" />
+    <Folder Include="CustomCells\" />
+    <Folder Include="CustomCells\Mail Details\" />
+    <Folder Include="ViewController\Sent\" />
+    <Folder Include="ViewController\Drafts\" />
+    <Folder Include="ViewController\Trash\" />
+    <Folder Include="ViewController\Calendar\" />
+    <Folder Include="ViewController\Invoice\" />
+    <Folder Include="Resources\Images.xcassets\RememberMeOff.imageset\" />
+    <Folder Include="Resources\Images.xcassets\RememberMeOn.imageset\" />
+    <Folder Include="Resources\Images.xcassets\Menu.imageset\" />
+    <Folder Include="Resources\Images.xcassets\Reply.imageset\" />
+    <Folder Include="Resources\Images.xcassets\ReplyAll.imageset\" />
+    <Folder Include="Resources\Images.xcassets\Forward.imageset\" />
+    <Folder Include="Resources\Images.xcassets\LineMenu.imageset\" />
+    <Folder Include="Resources\Images.xcassets\Inbox.imageset\" />
+    <Folder Include="Resources\Images.xcassets\Trash.imageset\" />
+    <Folder Include="Resources\Images.xcassets\Sent.imageset\" />
+    <Folder Include="Resources\Images.xcassets\Drafts.imageset\" />
+    <Folder Include="Resources\Images.xcassets\Invoice.imageset\" />
+    <Folder Include="Resources\Images.xcassets\Calendar.imageset\" />
+    <Folder Include="Resources\Images.xcassets\Refresh.imageset\" />
+    <Folder Include="Resources\Images.xcassets\Edit.imageset\" />
+    <Folder Include="Resources\Images.xcassets\DataBaseUnSelected.imageset\" />
+    <Folder Include="Resources\Images.xcassets\DataBaseSelected.imageset\" />
+    <Folder Include="CustomCells\MenuCell\" />
+    <Folder Include="CustomCells\MenuHader\" />
+    <Folder Include="ViewController\Notes\" />
+    <Folder Include="ViewController\Mail\" />
+    <Folder Include="ViewController\Mail\Inbox\" />
+    <Folder Include="ViewController\Mail\MailDetails\" />
+    <Folder Include="CustomCells\NotesCell\" />
+    <Folder Include="Resources\Images.xcassets\Search.imageset\" />
+    <Folder Include="Resources\Images.xcassets\Add.imageset\" />
+    <Folder Include="Resources\Images.xcassets\Delete.imageset\" />
+    <Folder Include="Resources\Images.xcassets\RadioUnselect.imageset\" />
+    <Folder Include="Resources\Images.xcassets\RadioSelect.imageset\" />
+    <Folder Include="Resources\Images.xcassets\DropArrow.imageset\" />
+    <Folder Include="Resources\Images.xcassets\SideArrow.imageset\" />
+    <Folder Include="MultiSelection\" />
+    <Folder Include="Resources\Images.xcassets\CalendarAdd.imageset\" />
+    <Folder Include="Resources\Images.xcassets\Notes.imageset\" />
+    <Folder Include="Resources\Images.xcassets\NotesAdd.imageset\" />
+    <Folder Include="Resources\Images.xcassets\NotesAmend.imageset\" />
+    <Folder Include="Resources\Images.xcassets\NotesDelete.imageset\" />
+    <Folder Include="Resources\Images.xcassets\Orders.imageset\" />
+    <Folder Include="Resources\Images.xcassets\OrderAmend.imageset\" />
+    <Folder Include="Resources\Images.xcassets\OrderConvert.imageset\" />
+    <Folder Include="Resources\Images.xcassets\OrderAdd.imageset\" />
+    <Folder Include="Resources\Images.xcassets\Logout.imageset\" />
+    <Folder Include="ViewController\Orders\" />
+    <Folder Include="CustomCells\OrderCell\" />
+    <Folder Include="ViewController\Orders\AddOrder\" />
+    <Folder Include="ViewController\Orders\AddOrder\AddOrderFirst\" />
+    <Folder Include="ViewController\Orders\AddOrder\AddOrderSecond\" />
+    <Folder Include="ViewController\Orders\AddOrder\AddOrderThird\" />
+    <Folder Include="ViewController\Orders\AddOrder\AddOrderSecond\Cells\" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="LaunchScreen.storyboard" />
+    <InterfaceDefinition Include="Main.storyboard" />
+    <InterfaceDefinition Include="ViewController\Login\LoginVC.xib" />
+    <InterfaceDefinition Include="ViewController\Settings\SettingsVc.xib" />
+    <InterfaceDefinition Include="CustomCells\Mail Details\MailDetailsCell.xib" />
+    <InterfaceDefinition Include="ViewController\Calendar\CalendarVC.xib" />
+    <InterfaceDefinition Include="ViewController\Drafts\DraftsVC.xib" />
+    <InterfaceDefinition Include="ViewController\Invoice\InvoiceVC.xib" />
+    <InterfaceDefinition Include="ViewController\Sent\SentVC.xib" />
+    <InterfaceDefinition Include="ViewController\Trash\TrashVC.xib" />
+    <InterfaceDefinition Include="CustomCells\MenuCell\MenuCell.xib" />
+    <InterfaceDefinition Include="CustomCells\MenuHader\MenuHeader.xib" />
+    <InterfaceDefinition Include="ViewController\Mail\Inbox\InboxVC.xib" />
+    <InterfaceDefinition Include="ViewController\Mail\MailDetails\MailDetailsVC.xib" />
+    <InterfaceDefinition Include="ViewController\Notes\ViewNotesVC.xib" />
+    <InterfaceDefinition Include="CustomCells\NotesCell\NotesCell.xib" />
+    <InterfaceDefinition Include="ViewController\Notes\CreateNotesVC.xib" />
+    <InterfaceDefinition Include="ViewController\Calendar\CreateCalendarEventVC.xib" />
+    <InterfaceDefinition Include="MultiSelection\MultiSelectionDialog.xib" />
+    <InterfaceDefinition Include="ViewController\Orders\OrderListVC.xib" />
+    <InterfaceDefinition Include="CustomCells\OrderCell\OrderListCell.xib" />
+    <InterfaceDefinition Include="ViewController\Orders\AddOrderVC.xib" />
+    <InterfaceDefinition Include="ViewController\Orders\AddOrder\AddOrderFirst\AddOrderFirstVC.xib" />
+    <InterfaceDefinition Include="ViewController\Orders\AddOrder\AddOrderSecond\AddOrderSecond.xib" />
+    <InterfaceDefinition Include="ViewController\Orders\AddOrder\AddOrderThird\AddOrderThird.xib" />
+    <InterfaceDefinition Include="ViewController\Orders\AddOrder\AddOrderSecond\AddOrderItemController.xib" />
+    <InterfaceDefinition Include="ViewController\Orders\AddOrder\AddOrderSecond\Cells\AddOrderSecondTVCell.xib" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="ViewController\Login\LoginVC.cs" />
+    <Compile Include="ViewController\Login\LoginVC.designer.cs" />
+    <Compile Include="Utils\IosColorConstant.cs" />
+    <Compile Include="Utils\LocalizedString.cs" />
+    <Compile Include="Utils\IosUtility.cs" />
+    <Compile Include="Utils\Settings.cs" />
+    <Compile Include="PickerModels\PickerModel.cs" />
+    <Compile Include="ViewController\Settings\SettingsVc.cs" />
+    <Compile Include="ViewController\Settings\SettingsVc.designer.cs" />
+    <Compile Include="ViewController.cs" />
+    <Compile Include="ViewController.designer.cs">
+      <DependentUpon>ViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomCells\Mail Details\MailDetailsCell.cs" />
+    <Compile Include="CustomCells\Mail Details\MailDetailsCell.designer.cs">
+      <DependentUpon>MailDetailsCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\IosFontSize.cs" />
+    <Compile Include="ViewController\Calendar\CalendarVC.cs" />
+    <Compile Include="ViewController\Calendar\CalendarVC.designer.cs">
+      <DependentUpon>CalendarVC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController\Drafts\DraftsVC.cs" />
+    <Compile Include="ViewController\Drafts\DraftsVC.designer.cs">
+      <DependentUpon>DraftsVC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController\Invoice\InvoiceVC.cs" />
+    <Compile Include="ViewController\Invoice\InvoiceVC.designer.cs">
+      <DependentUpon>InvoiceVC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController\Sent\SentVC.cs" />
+    <Compile Include="ViewController\Sent\SentVC.designer.cs">
+      <DependentUpon>SentVC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController\Trash\TrashVC.cs" />
+    <Compile Include="ViewController\Trash\TrashVC.designer.cs">
+      <DependentUpon>TrashVC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomCells\MenuCell\MenuCell.cs" />
+    <Compile Include="CustomCells\MenuCell\MenuCell.designer.cs">
+      <DependentUpon>MenuCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomCells\MenuHader\MenuHeader.cs" />
+    <Compile Include="CustomCells\MenuHader\MenuHeader.designer.cs">
+      <DependentUpon>MenuHeader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController\Mail\Inbox\InboxVC.cs" />
+    <Compile Include="ViewController\Mail\Inbox\InboxVC.designer.cs">
+      <DependentUpon>..\..\Inbox\InboxVC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController\Mail\MailDetails\MailDetailsVC.cs" />
+    <Compile Include="ViewController\Mail\MailDetails\MailDetailsVC.designer.cs">
+      <DependentUpon>..\..\MailDetails\MailDetailsVC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController\Notes\ViewNotesVC.cs" />
+    <Compile Include="ViewController\Notes\ViewNotesVC.designer.cs">
+      <DependentUpon>ViewNotesVC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomCells\NotesCell\NotesCell.cs" />
+    <Compile Include="CustomCells\NotesCell\NotesCell.designer.cs">
+      <DependentUpon>NotesCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PickerModels\EntityPickerModel.cs" />
+    <Compile Include="PickerModels\AccountCodePickerModel.cs" />
+    <Compile Include="ViewController\Notes\CreateNotesVC.cs" />
+    <Compile Include="ViewController\Notes\CreateNotesVC.designer.cs">
+      <DependentUpon>CreateNotesVC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController\Calendar\CreateCalendarEventVC.cs" />
+    <Compile Include="ViewController\Calendar\CreateCalendarEventVC.designer.cs">
+      <DependentUpon>CreateCalendarEventVC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PickerModels\UserRefPicker.cs" />
+    <Compile Include="MultiSelection\MultiSelectionDialog.cs" />
+    <Compile Include="MultiSelection\MultiSelectionDialog.designer.cs">
+      <DependentUpon>MultiSelectionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PickerModels\EventTypePickerModel.cs" />
+    <Compile Include="ViewController\Orders\OrderListVC.cs" />
+    <Compile Include="ViewController\Orders\OrderListVC.designer.cs">
+      <DependentUpon>OrderListVC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomCells\OrderCell\OrderListCell.cs" />
+    <Compile Include="CustomCells\OrderCell\OrderListCell.designer.cs">
+      <DependentUpon>OrderListCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController\Orders\AddOrderVC.cs" />
+    <Compile Include="ViewController\Orders\AddOrderVC.designer.cs">
+      <DependentUpon>AddOrderVC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController\Orders\BaseAddOrderVC.cs" />
+    <Compile Include="ViewController\Orders\AddOrder\AddOrderFirst\AddOrderFirstVC.cs" />
+    <Compile Include="ViewController\Orders\AddOrder\AddOrderFirst\AddOrderFirstVC.designer.cs">
+      <DependentUpon>AddOrderFirstVC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController\Orders\AddOrder\AddOrderSecond\AddOrderSecond.cs" />
+    <Compile Include="ViewController\Orders\AddOrder\AddOrderSecond\AddOrderSecond.designer.cs">
+      <DependentUpon>AddOrderSecond.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController\Orders\AddOrder\AddOrderThird\AddOrderThird.cs" />
+    <Compile Include="ViewController\Orders\AddOrder\AddOrderThird\AddOrderThird.designer.cs">
+      <DependentUpon>AddOrderThird.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PickerModels\AccountOrderPickerModel.cs" />
+    <Compile Include="ViewController\Orders\AddOrder\AddOrderSecond\AddOrderItemController.cs" />
+    <Compile Include="ViewController\Orders\AddOrder\AddOrderSecond\AddOrderItemController.designer.cs">
+      <DependentUpon>AddOrderItemController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PickerModels\RevenueAccountPickerModel.cs" />
+    <Compile Include="PickerModels\TaxTypePickerModel.cs" />
+    <Compile Include="ViewController\Orders\AddOrder\AddOrderSecond\Cells\AddOrderSecondTVCell.cs" />
+    <Compile Include="ViewController\Orders\AddOrder\AddOrderSecond\Cells\AddOrderSecondTVCell.designer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Base.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\fr.lproj\Localizable.strings" />
+  </ItemGroup>
+  <Import Project="..\LucidX\LucidX.projitems" Label="Shared" Condition="Exists('..\LucidX\LucidX.projitems')" />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+</Project>

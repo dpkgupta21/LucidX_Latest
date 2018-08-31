@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+	    xmlns:local="http://schemas.android.com/apk/res-auto">
+
+  <item android:id="@+id/menu_search"
+      android:icon="@drawable/search"
+      local:showAsAction="always"
+      local:actionViewClass="android.support.v7.widget.SearchView"/>
+  
+  <item android:id="@+id/menu_refresh"
+      android:icon="@drawable/refresh"
+      local:showAsAction="always"/>
+
+  <item android:id="@+id/menu_new_mail"
+      android:icon="@drawable/new_mail"
+      local:showAsAction="always"/>
+
+</menu>

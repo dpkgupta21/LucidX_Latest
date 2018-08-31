@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/splash_background_color">
+
+  <RelativeLayout
+      android:id="@+id/relative"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:padding="30dp">
+
+    <LinearLayout
+        android:id="@+id/linear_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+      <ImageView
+          android:id="@+id/img_logo"
+          android:layout_width="40dp"
+          android:layout_height="40dp"
+          android:src="@drawable/logo" />
+
+      <LucidX.Droid.Source.CustomViews.CustomTextView
+          android:id="@+id/txt_heading"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_toRightOf="@+id/img_logo"
+          android:text="@string/heading"
+          android:textColor="@color/white_transparent_50" />
+      <LucidX.Droid.Source.CustomViews.CustomTextView
+          android:id="@+id/txt_database_name"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_toRightOf="@+id/txt_heading"
+          android:text=""
+          android:textColor="@color/white_transparent_50" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear_header"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical">
+
+      <LucidX.Droid.Source.CustomViews.CustomTextView
+          android:id="@+id/txt_username"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:drawableLeft="@drawable/user_icon"
+          android:drawablePadding="3dp"
+          android:text="@string/username_lbl"
+          android:textColor="@color/white_transparent_50" />
+
+      <LucidX.Droid.Source.CustomViews.CustomEditText
+          android:id="@+id/edt_username"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@drawable/edittextbg"
+          android:hint="@string/username_hint"
+          android:maxLines="1"
+          android:singleLine="true"
+          android:textColor="@color/white_transparent_50"
+          android:textColorHint="@color/login_lbl_color"
+          android:textSize="16sp" />
+
+      <LucidX.Droid.Source.CustomViews.CustomTextView
+          android:id="@+id/txt_password"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="20dp"
+          android:drawableLeft="@drawable/password"
+          android:drawablePadding="3dp"
+          android:text="@string/password_lbl"
+          android:textColor="@color/white_transparent_50" />
+
+       <RelativeLayout
+        android:id="@+id/linear_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"  
+        android:background="@drawable/edittextbg">
+        <LucidX.Droid.Source.CustomViews.CustomEditText
+          android:id="@+id/edt_password"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"      
+          android:hint="@string/password_hint"
+          android:maxLines="1"
+          android:singleLine="true"
+          android:inputType="textPassword"
+          android:background="@null"
+          android:padding="0dp"
+          android:layout_alignParentLeft="true"
+          android:textColor="@color/white_transparent_50"
+          android:layout_toLeftOf="@+id/img_show_pwd"
+          android:textColorHint="@color/login_lbl_color"
+          android:textSize="16sp" />
+       
+         <LucidX.Droid.Source.CustomViews.CustomCheckBox
+          android:id="@+id/chk_show_pwd"
+          android:layout_alignParentRight="true"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content" 
+          android:buttonTint="@color/white_transparent_50"
+          android:src="@drawable/password"/>
+      </RelativeLayout>
+      <LucidX.Droid.Source.CustomViews.CustomTextView
+          android:id="@+id/txt_language"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="20dp"
+          android:drawableLeft="@drawable/language"
+          android:drawablePadding="3dp"
+          android:text="@string/language_lbl"
+          android:textColor="@color/white_transparent_50" />
+
+      <Spinner
+          android:id="@+id/spin_language"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@drawable/edittextbg" />
+
+
+      <RadioGroup
+          android:id="@+id/radio_group"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="10dp"
+          android:orientation="horizontal">
+
+        <LucidX.Droid.Source.CustomViews.CustomRadioButton
+            android:id="@+id/radio_btn_db_saas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/white_transparent_50"
+            android:text="@string/db_saas"
+            android:textColor="@color/white_transparent_50" />
+
+        <LucidX.Droid.Source.CustomViews.CustomRadioButton
+            android:id="@+id/radio_btn_db_demo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/white_transparent_50"
+            android:text="@string/db_demo"
+            android:textColor="@color/white_transparent_50" />
+
+        <LucidX.Droid.Source.CustomViews.CustomRadioButton
+            android:id="@+id/radio_btn_db_hq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/white_transparent_50"
+            android:text="@string/db_hq"
+            android:textColor="@color/white_transparent_50" />
+
+        <LucidX.Droid.Source.CustomViews.CustomRadioButton
+            android:id="@+id/radio_btn_db_lucid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/white_transparent_50"
+            android:text="@string/db_lucid"
+            android:textColor="@color/white_transparent_50" />
+      </RadioGroup>
+
+      <LucidX.Droid.Source.CustomViews.CustomCheckBox
+          android:id="@+id/chk_remember_me"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="10dp"
+           android:buttonTint="@color/white_transparent_50"
+          android:text="@string/remember_me"
+          android:textColor="@color/white_transparent_50" />
+    </LinearLayout>
+
+    <LucidX.Droid.Source.CustomViews.CustomButton
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear_layout"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/btn_blue_color_selector"
+        android:text="@string/btn_sign_in_lbl"
+        android:textColor="@color/white" />
+  </RelativeLayout>
+
+  <LucidX.Droid.Source.CustomViews.CustomTextView
+      android:id="@+id/txt_copyright"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:layout_centerHorizontal="true"
+      android:paddingBottom="3dp"
+      android:singleLine="true"
+      android:text="@string/copyright_lbl"
+      android:textColor="@color/white_transparent_50" />
+</RelativeLayout>
