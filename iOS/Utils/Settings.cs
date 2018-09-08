@@ -17,7 +17,7 @@ namespace IosUtils
         public static string lucid_connection = "LUCIDConneection";
 
         public static string saas_val = "SAAS";
-        public static string demo_val = "DEMO";
+        public static string demo_val = "HELP";
         public static string hq_val = "HQ";
         public static string lucid_val = "LUCID";
 

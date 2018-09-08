@@ -325,10 +325,10 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YGN-GU-Dy6">
                                                     <rect key="frame" x="70" y="5" width="65" height="20"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <state key="normal" title=" DEMO" image="DataBaseUnSelected">
+                                                    <state key="normal" title=" HELP" image="DataBaseUnSelected">
                                                         <color key="titleColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
                                                     </state>
-                                                    <state key="selected" title=" DEMO" image="DataBaseSelected"/>
+                                                    <state key="selected" image="DataBaseSelected"/>
                                                     <variation key="heightClass=regular-widthClass=regular">
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     </variation>
